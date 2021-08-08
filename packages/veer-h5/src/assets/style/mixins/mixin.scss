@@ -1,0 +1,100 @@
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin flex() {
+  display: flex;
+}
+@mixin centerX() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin centerY() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin leftMiddleT($top) {
+  position: absolute;
+  left: 50%;
+  top: $top;
+  transform: translateX(-50%);
+}
+
+@mixin leftMiddleB($bottom) {
+  position: absolute;
+  left: 50%;
+  bottom: $bottom;
+  transform: translateX(-50%);
+}
+
+@mixin absoluteLT($left, $top) {
+  position: absolute;
+  left: $left;
+  top: $top;
+}
+
+@mixin absoluteRT($right, $top) {
+  position: absolute;
+  right: $right;
+  top: $top;
+}
+
+@mixin absoluteLB($left, $botm) {
+  position: absolute;
+  left: $left;
+  bottom: $botm;
+}
+
+@mixin absoluteRB($right, $botm) {
+  position: absolute;
+  right: $right;
+  bottom: $botm;
+}
+
+@mixin tow_frame($from_left:0,$from_top:0,$to_left:0,$to_top:0) {
+  0%{
+      background-position: $from_left $from_top;
+  }
+  100%{
+      background-position: $to_left $to_top;
+  }
+}
+
+@mixin set($w:0,$h:0,$bg:0 0,$l:0,$t:0,$op:1){
+  width: $w;
+  height: $h;
+  background-position:$bg;
+  left: $l;
+  top: $t;
+  opacity: $op;
+}
+
+@mixin anima($name,$duration:1s,$timing:linear,$count:1,$delay:0){
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-iteration-count:$count;
+  animation-delay: $delay;
+}
+
+@mixin sprite($width:640px){
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: $width auto;
+}
+
+@mixin bgBase {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}

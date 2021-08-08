@@ -1,0 +1,17 @@
+.DS_Store
+.idea
+.git
+.vscode
+.history
+.cache
+.temp
+dist
+*.log
+node_modules
+npm-debug.log
+/.changelog
+
+/packages/*/lib
+/packages/*/es
+/packages/*/dist
+package-lock.json
